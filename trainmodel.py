@@ -57,7 +57,7 @@ val_dataset = torch.utils.data.Subset(dataset, val_indices)
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=16, shuffle=False)
 
-print(f"✅ Loaded {len(train_dataset)} training images and {len(val_dataset)} validation images.")
+print(f" Loaded {len(train_dataset)} training images and {len(val_dataset)} validation images.")
 
 # Load a pre-trained model (EfficientNet-B0)
 model = models.efficientnet_b0(pretrained=True)
@@ -99,4 +99,4 @@ for epoch in range(num_epochs):
 
 # Save the trained model
 torch.save(model.state_dict(), "model.pth")
-print("🎉 Training complete! Model saved as 'model.pth'.")
+print(" Training complete! Model saved as 'model.pth'.")
